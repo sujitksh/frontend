@@ -5,8 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy:{
-      "/api":"http://35.154.107.165:8000" 
-    }
+      "/api":"http://13.126.195.163:8000" 
+    },
+    watch: {
+      usePolling: true,
+    },
+    host: true, 
+    strictPort: true,
+    port: 5173,
   },
   plugins: [react()],
 })
