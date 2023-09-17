@@ -3,4 +3,4 @@ services:
   web:
     image: "sujitksh/react-first-app:latest"
     ports:
-      - "3000:3000"
+      - "3000:80"
