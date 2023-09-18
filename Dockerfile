@@ -10,5 +10,5 @@ RUN npm run build
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
-COPY --from=build  /react-app/build .
+COPY --from=build /react-app/dist .
 CMD ["nginx","-g","daemon off;"]
