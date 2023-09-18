@@ -1,7 +1,7 @@
 #node block
 FROM node:18-alpine as nodework
 WORKDIR /react-app
-COPY package.json package-lock.json .
+COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN npm run build
