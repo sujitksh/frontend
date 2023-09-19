@@ -7,9 +7,8 @@ function App() {
   useEffect(()=>{
     try{
       const fetData = async()=>{
-        const testData = await axios.get("http://43.205.232.204:8000/api/test")
+        const testData = await axios.get("http://3.109.216.62:8000/api/test")
         setCount(testData.data)
-        console.log(testData)
      }
      fetData()
     }catch(err){
@@ -20,7 +19,7 @@ function App() {
   return (
    <React.Fragment>
     <h3 style={{"marginLeft":"500px"}}>Employee Details</h3>
-    <table class="table" style={{"width":"700px","marginLeft":"250px"}}>
+    <table className="table" style={{"width":"700px","marginLeft":"250px"}}>
       <thead>
         <tr>
           <th scope="col">Sno.</th>
