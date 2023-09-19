@@ -7,7 +7,7 @@ function App() {
   useEffect(()=>{
     try{
       const fetData = async()=>{
-        const testData = await axios.get("http://3.109.216.62:8000/api/test")
+        const testData = await axios.get("http://13.233.208.187:8000/api/test")
         setCount(testData.data)
      }
      fetData()
