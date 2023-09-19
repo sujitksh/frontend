@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy:{
-      "/api":"http://13.232.206.251:8000" 
+      "/api":"http://43.205.232.204:8000" 
     },
     watch: {
       usePolling: true,
