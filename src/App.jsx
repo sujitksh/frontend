@@ -1,5 +1,6 @@
 import React,{ useState,useEffect } from 'react'
 import axios from "axios"
+import { API_URL } from './config/api'
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   useEffect(()=>{
     try{
       const fetData = async()=>{
-        const testData = await axios.get("http://3.110.127.91:8000/api/test")
+        const testData = await axios.get(`${API_URL}/api/test`)
         setCount(testData.data)
      }
      fetData()
