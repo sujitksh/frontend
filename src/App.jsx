@@ -16,7 +16,7 @@ function App() {
        console.log(err)
     } 
   },[])
-
+console.log(count)
   return (
    <React.Fragment>
     <h3 style={{"marginLeft":"500px"}}>Employee Details</h3>
@@ -25,8 +25,8 @@ function App() {
         <tr>
           <th scope="col">Sno.</th>
           <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">City</th>
+          <th scope="col">Email</th>
+         
         </tr>
       </thead>
       <tbody>
@@ -35,8 +35,7 @@ function App() {
           <tr key={index}>
               <th scope="row">{index+1}</th>
               <td>{res.name}</td>
-              <td>{res.age}</td>
-              <td>{res.city}</td>
+              <td>{res.email}</td>
           </tr>
           ):""
         }
