@@ -2,7 +2,7 @@
 FROM node:18.17.1-alpine AS build
 WORKDIR /react-app
 COPY package.json .
-RUN npm i
+RUN npm install -g npm@10.1.0
 COPY . .
 RUN npm run build
 
