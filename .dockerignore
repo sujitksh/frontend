@@ -1,0 +1,10 @@
+.git
+.vscode
+.gitignore
+node_modules
+.env
+dist
+docker-compose.yml
+Dockefile
+Jenkinsfile
+README.md
