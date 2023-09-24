@@ -16,7 +16,6 @@ function App() {
        console.log(err)
     } 
   },[])
-
   return (
    <React.Fragment>
     <h3 style={{"marginLeft":"500px"}}>Employee Details</h3>
