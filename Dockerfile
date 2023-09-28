@@ -2,9 +2,13 @@
 FROM node:18.16.0-alpine AS build
 WORKDIR /react-app
 COPY package*.json ./
-RUN --mount=target=/react-app/node_modules,type=cache npm install --production
+RUN npm ci 
 COPY . .
-RUN --mount=target=/react-app/node_modules,type=cache npm run build
+RUN npm run build
+
+#2-stage build
+FROM node:18.16.0-alpine
+COPY --from=build /node_modules ./node_modules
 
 #nginx block
 FROM nginx:alpine

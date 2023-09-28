@@ -10,7 +10,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "build the code "
-                sh "DOCKER_BUILDKIT=1 docker build -t react-first-app ."
+                sh "docker build -t react-first-app ."
             }
         }
         stage('Push to dockerHub') { 
