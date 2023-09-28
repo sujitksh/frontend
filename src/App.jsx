@@ -1,4 +1,5 @@
 import React,{ useState,useEffect } from 'react'
+import Child from './component/Child'
 import axios from "axios"
 import { API_URL } from './config/api'
 
@@ -20,6 +21,7 @@ function App() {
    <React.Fragment>
     <h3 style={{"marginLeft":"500px"}}>Employee Details</h3>
     <p style={{"marginLeft":"500px"}}>This is All Employee list of my company</p>
+    <Child />
     <table className="table" style={{"width":"700px","marginLeft":"250px"}}>
       <thead>
         <tr>
