@@ -1,14 +1,10 @@
 #node block
 FROM node:18.16.0-alpine AS build
 WORKDIR /react-app
-COPY package*.json ./
-RUN npm ci 
+COPY package-lock.json package.json ./
+RUN npm install 
 COPY . .
 RUN npm run build
-
-#2-stage build
-FROM node:18.16.0-alpine
-COPY --from=build /node_modules ./node_modules
 
 #nginx block
 FROM nginx:alpine
